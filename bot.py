@@ -18,7 +18,7 @@ async def on_ready():
 
 bot.remove_command('help')
 
-@bot.command(aliases='10sgiveaway')
+@bot.command()
 async def giveaway(ctx):
     await ctx.send('React here to enter!')
     await message.add_reaction('tada')
