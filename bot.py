@@ -17,7 +17,17 @@ async def on_ready():
     return
 
 bot.remove_command('help')
-    
+
+@bot.command(aliases='1daygiveaway')
+asunc def giveaway(ctx, *)
+    await ctx.send('React here to enter!')
+    await message.add_reaction('tada')
+    asyncio.sleep(10)
+    users = await reaction.users().flatten()
+    # users is now a list of User...
+    winner = random.choice(users)
+    await channel.send('{} has won the raffle.'.format(winner))
+
 @bot.command()
 @commands.has_role(627226040720162816)
 async def presence(ctx, *, status):
