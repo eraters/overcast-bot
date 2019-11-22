@@ -18,8 +18,8 @@ async def on_ready():
 
 bot.remove_command('help')
 
-@bot.command(aliases='1daygiveaway')
-async def giveaway(ctx, *):
+@bot.command(aliases='10sgiveaway')
+async def giveaway(ctx):
     await ctx.send('React here to enter!')
     await message.add_reaction('tada')
     asyncio.sleep(10)
