@@ -19,7 +19,7 @@ async def on_ready():
 bot.remove_command('help')
 
 @bot.command()
-async def giveaway(ctx):
+async def giveaway(ctx, message):
     await ctx.send('React here to enter!')
     await message.add_reaction('tada')
     asyncio.sleep(10)
